@@ -1,0 +1,107 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+.app {
+  //헤더
+   .header {
+      z-index: 55;
+      width: 100%;
+      position: fixed;
+      top: 0;left: 0;
+      background: #ffffff13;
+      box-shadow: 0 2px 10px #ffffff71;
+      .container {
+         
+         height: 10rem;
+         .logo {
+            width: 25rem;
+            background: url(../public/img/logo1.png) no-repeat center center/100%;
+            height: 100%;
+            filter: invert(100) brightness(.8);
+         }
+         .nav {
+            height: 100%;
+            ul {
+               display: flex;
+               height: 100%;
+               list-style: none;
+               align-items: center;
+
+               li {
+                position: relative;
+                z-index: 101;
+                  width: 20rem;
+
+                  text-align: center;
+                  font-size: 2rem;
+                  color: #fff;
+                  text-shadow: 0px 2px 5px #000000bb;
+               }
+            }
+         }
+      }
+   }
+   //Section1
+   .Section1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    padding-top: 15rem;
+    background: url(../public/img/back1.gif) no-repeat center/100%;
+    position: relative;
+    .sectionBg{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #00000080;
+      z-index: 2;
+    }
+    .container{z-index: 3;}
+    /* .profilBox{
+      width: 30%;
+      height: 70rem;
+        .profil-img{
+          width: 100%;
+          height: 90%;
+          padding: 20px;
+          img{
+            width: 100%;
+            height: 100%;
+            
+          }
+        }
+        .info{
+          width: 100%;
+          height: 10%;
+          padding: 20px;
+          padding-top: 10px;
+          text-align: center;
+          p{
+            font-size: 2rem;
+          }
+          
+        }
+    } */
+    .intro{
+      width: 100%;
+      text-align: left;
+      color: #fff;
+      font-weight: bold;
+      h2{
+        margin-bottom: 20px;
+        font-size: 15rem;
+        strong{
+          font-size: 10rem;
+        }
+      }
+    }
+   }
+}
