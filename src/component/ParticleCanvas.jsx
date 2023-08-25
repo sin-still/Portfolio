@@ -1,5 +1,3 @@
-// 사용방법 : 그냥 원하는 곳에 올리면 됩니다.
-
 import React, { useRef, useEffect } from 'react';
 
 const ParticleCanvas = () => {
@@ -17,31 +15,29 @@ const ParticleCanvas = () => {
       particles.push({
         x: e.clientX,
         y: e.clientY,
-        size: Math.random() * 3 + 2,
+        size: Math.random() * 10 + 5,
+        color: getRandomColor(), // 수정된 부분: 랜덤 색상 생성
         opacity: .8,
         speedX: Math.random() - 0.5,
         speedY: Math.random() - 0.5,
-
       });
     };
 
     const animateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
 
       for (let i = 0; i < particles.length; i++) {
         const particle = particles[i];
-        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
+        /* ctx.fillStyle = `rgba(${particle.color}, ${particle.opacity})`; */
+        ctx.fillStyle = `${particle.color}`; // 수정된 부분: 색상 적용
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.font = `${particle.size}px Arial`;
+        ctx.fillText('★', particle.x, particle.y);
         ctx.fill();
 
         particle.x += particle.speedX;
         particle.y += particle.speedY;
-        // 파티클 사라지는 속도 (높을수록 빨리 사라짐)
-        particle.opacity -= 0.01; 
-        // particle.x += particle.speedX * Math.sin(performance.now() * 0.005); // 물결 모션
-        // particle.y += particle.speedY * Math.cos(performance.now() * 0.005); // 물결 모션
+        particle.opacity -= 0.01;
 
         if (particle.opacity <= 0) {
           particles.splice(i, 1);
@@ -51,7 +47,6 @@ const ParticleCanvas = () => {
 
       requestAnimationFrame(animateParticles);
     };
-
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -68,10 +63,16 @@ const ParticleCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef}
-  style={{width:'100vw', height:'100vh', position:'absolute',
-  background:'', zIndex:'100' }}>
-  </canvas>;
+  return <canvas
+    ref={canvasRef}
+    style={{
+      width: '100vw',
+      height: '100vh',
+      position: 'fixed',
+      background: '',
+      zIndex: '100',
+    }}
+  />;
 };
 
 export default ParticleCanvas;

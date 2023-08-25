@@ -5,7 +5,18 @@
   max-width: 1540px;
   margin: 0 auto;
 }
+.sectionTitle{
+  font-size: 4rem;
+  color: #a5a5a5;
+  margin-top: 15rem;
+}
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .app {
+
   //헤더
    .header {
       z-index: 55;
@@ -53,7 +64,7 @@
     height: 100vh;
     padding: 50px;
     padding-top: 15rem;
-    background: url(../public/img/back1.gif) no-repeat center/100%;
+    background: url(../public/img/back1.gif) no-repeat center/cover;
     position: relative;
     .sectionBg{
       width: 100%;
@@ -103,5 +114,10 @@
         }
       }
     }
+   }
+   .section2{
+    width: 100%;
+    height: 100vh;
+    background: #222;
    }
 }
