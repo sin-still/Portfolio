@@ -10,6 +10,13 @@ const ParticleCanvas = () => {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    
+    const getRandomColor = () => {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r},${g},${b})`;
+    };
 
     const handleMouseMove = (e) => {
       particles.push({
