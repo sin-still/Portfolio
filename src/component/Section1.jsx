@@ -14,9 +14,11 @@ const Section1 = () => {
                </div>
             </div> */}
             <div className="intro">
-               <h2>Front-end <br /> <strong>Developer</strong></h2>
+               <h2 className={`firstTitle ${}`}>Front-end</h2>
+               <br />
+               <h2 className={`secondTitle ${ }`}><strong>Developer</strong></h2>
                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere reiciendis a voluptatibus,
+                  
                </p>
             </div>
          </div>

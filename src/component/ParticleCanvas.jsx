@@ -23,8 +23,9 @@ const ParticleCanvas = () => {
         x: e.clientX,
         y: e.clientY,
         size: Math.random() * 10 + 5,
-        color: getRandomColor(), // 수정된 부분: 랜덤 색상 생성
-        opacity: .8,
+        /* color: getRandomColor(), // 수정된 부분: 랜덤 색상 생성 */
+        color: `255,255,255`, // 수정된 부분: 랜덤 색상 생성
+        opacity: .5,
         speedX: Math.random() - 0.5,
         speedY: Math.random() - 0.5,
       });
@@ -35,8 +36,8 @@ const ParticleCanvas = () => {
 
       for (let i = 0; i < particles.length; i++) {
         const particle = particles[i];
-        /* ctx.fillStyle = `rgba(${particle.color}, ${particle.opacity})`; */
-        ctx.fillStyle = `${particle.color}`; // 수정된 부분: 색상 적용
+        ctx.fillStyle = `rgba(${particle.color}, ${particle.opacity})`;
+        /* ctx.fillStyle = `${particle.color}`; // 수정된 부분: 색상 적용 */
         ctx.beginPath();
         ctx.font = `${particle.size}px Arial`;
         ctx.fillText('★', particle.x, particle.y);
