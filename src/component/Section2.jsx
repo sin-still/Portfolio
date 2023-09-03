@@ -12,13 +12,13 @@ const Section2 = () => {
                      <p>"저는 모시깽이가 되고픈 어쩌구저쩌구하는 개발자입니다"</p>
                   </div>
                   <div className='myProfileInfo'>
-                     <h3 className='infoTitle'>name</h3>
+                     <h3 className='infoTitle'>이름</h3>
                      <p className='infoText'>
                         이신철
                      </p>
                      <h3 className='infoTitle'>생일</h3>
                      <p className='infoText'>
-                        <address>1996.08.16</address>
+                        <address>1996.08.16 (만 27세)</address>
                      </p>
                      <h3 className='infoTitle'>주소</h3>
                      <p className='infoText'>

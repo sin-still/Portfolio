@@ -14,7 +14,7 @@ const Section1 = () => {
                </div>
             </div> */}
             <div className="intro">
-               <h2 /* className={`firstTitle ${}`} */>Front-end</h2>
+               <h2 /* className={`firstTitle ${}`} */>Front-End</h2>
                <br />
                <h2 /* className={`secondTitle ${ }`} */><strong>Developer</strong></h2>
                <p>
@@ -22,7 +22,7 @@ const Section1 = () => {
                </p>
             </div>
             <div className='portfolio'>
-               <h2 className='portfolioTitle'>Sinchul's <i>portfolio</i></h2>
+               <h2 className='portfolioTitle'>Sinchul's <i>Portfolio</i></h2>
             </div>
          </div>
       </div>
