@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Nanum+Myeongjo&display=swap');
+
 .container{
   display: flex;
   justify-content: space-between;
@@ -8,15 +10,25 @@
 .sectionTitle{
   font-size: 4rem;
   color: #a5a5a5;
-  margin-top: 15rem;
+  margin-top: 9rem;
 }
 canvas{
   position: fixed;
   top: 0;
   left: 0;
 }
+.section{
+  display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+    padding-top: 7rem;
+    /* background: url(../public/img/back1.gif) no-repeat center/cover; */
+    position: relative;
+}
 .app {
-
+  font-family: 'Nanum Myeongjo', serif;
   //헤더
    .header {
       z-index: 55;
@@ -78,65 +90,144 @@ canvas{
       background: #1d1d1d;
       z-index: 2;
     }
-    .container{z-index: 3;}
-    /* .profilBox{
-      width: 30%;
-      height: 70rem;
-        .profil-img{
-          width: 100%;
-          height: 90%;
-          padding: 20px;
-          img{
-            width: 100%;
-            height: 100%;
-            
-          }
-        }
-        .info{
-          width: 100%;
-          height: 10%;
-          padding: 20px;
-          padding-top: 10px;
-          text-align: center;
-          p{
-            font-size: 2rem;
+    .container{z-index: 3;
+    flex-direction: column;
+      .intro{
+
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        font-weight: 400;
+        position: relative;
+        
+        animation-name: title1;
+        animation-duration: 2s;
+
+        h2{
+          font-weight: 400;
+          &.firstTitle{right: 200%;}
+          &.secondTitle{left: 200%;}
+          margin-left: 3rem;
+          margin-bottom: 20px;
+          
+          font-size: 12rem;
+          position: relative;
+          display: inline-block;
+          &::after{
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            content: "";
+            width: 120%;
+            height: 2px;
+            background: #fff;
           }
           
+          
+          strong{
+            font-size: 10rem;
+            font-weight: 400;
+          }
         }
-    } */
-    .intro{
-      width: 100%;
-      text-align: left;
-      color: #fff;
-      font-weight: bold;
-      h2{
-        &.firstTitle{right: 200%;}
-        &.secondTitle{left: 200%;}
-        margin-left: 3rem;
-        margin-bottom: 20px;
-        font-size: 12rem;
-        position: relative;
-        display: inline-block;
-        &::after{
-          position: absolute;
-          bottom: -20px;
-          left: 0;
-          content: "";
-          width: 120%;
-          height: 2px;
-          background: #fff;
-        }
-        
-        
-        strong{
+      }
+      .portfolio{
+        /* background: beige; */
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        opacity: 0;
+        animation-name: title2;
+        animation-delay: 2s;
+        animation-duration: 1s;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        .portfolioTitle{
+          color: rgba(255, 255, 255, 0.877);
           font-size: 10rem;
+          font-style: italic;
+          letter-spacing:10px;
+          /* font-family: 'Dancing Script', cursive; */
+          /* font-family: 'Caveat', cursive; */
+          font-weight: 400;
+          
         }
       }
     }
    }
    .section2{
-    width: 100%;
-    height: 100vh;
-    background: #222;
+    .container{
+      flex-direction: column;
+      .sectionTitle{height: 10%;}
+      .aboutArea{
+        display: flex;
+        height: 90%;
+        .myProfileImg{
+          width: 40%;
+          padding: 2rem;
+          padding-left: 0;
+          display: flex;
+          align-items: center;
+          /* justify-content: center; */
+          img{
+            height: 100%;
+            border-radius: 15px;
+          }
+        }
+        .myProfile{
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          .myProfileText{
+            display: flex;
+            height: 30%;
+            align-items: center;
+            justify-content: center;
+          }
+          .myProfileInfo{
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            padding-bottom: 3rem;
+            height: 70%;
+            padding: 2.5rem;
+            .infoTitle{
+              font-size: 2.5rem;
+              margin-bottom: .5rem;
+              margin-top: 2rem;
+            }
+            .infoText{
+              font-size: 2.3rem;
+
+            }
+          }
+        } 
+      }
+    }
    }
+}
+
+@keyframes title1 {
+  0%{
+    top: -100%;
+    opacity: 0;
+    filter: blur(10px);
+  }
+  40%{
+    opacity: 0;
+  }
+  100%{
+    top: 0;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes title2 {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

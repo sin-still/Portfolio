@@ -24,7 +24,7 @@ const ParticleCanvas = () => {
         y: e.clientY,
         size: Math.random() * 10 + 5,
         /* color: getRandomColor(), // 수정된 부분: 랜덤 색상 생성 */
-        color: `255,255,255`, // 수정된 부분: 랜덤 색상 생성
+        color: `0,0,0`, // 수정된 부분: 랜덤 색상 생성
         opacity: .5,
         speedX: Math.random() - 0.5,
         speedY: Math.random() - 0.5,
