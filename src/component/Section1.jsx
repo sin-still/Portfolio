@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section1 = () => {
    return (
-      <div className='Section1 section'>
+      <div className='section1 section'>
          <div className='sectionBg'></div>
          <div className='container'>
             {/* <div className="profilBox">

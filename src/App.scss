@@ -6,6 +6,12 @@
   width: 100%;
   max-width: 1700px;
   margin: 0 auto;
+  .sectionTitle{
+    z-index: 50;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: normal;;
+  }
 }
 .sectionTitle{
   font-size: 4rem;
@@ -19,13 +25,59 @@ canvas{
 }
 .section{
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 5rem;
+  padding-top: 7rem;
+  z-index: 49;
+  /* background: url(../public/img/back1.gif) no-repeat center/cover; */
+  position: relative;
+}
+.conSection{
+  &::after {
+    content: "";
+    width: 90%;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    background: #ffffff6c;
+    top: 50%;
+    transform: translate(-50%, -50%) ;
+    transition: .5s ; /* transform 속성에 대한 트랜지션 설정 */
+    z-index: 47;
+  }
+  .sectionBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 50% 50%;
     width: 100%;
     height: 100vh;
-    padding: 5rem;
-    padding-top: 7rem;
-    /* background: url(../public/img/back1.gif) no-repeat center/cover; */
-    position: relative;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .5s linear;
+    z-index: 45;
+    opacity: 0;
+    &.sectionBg1{
+      background-image: linear-gradient(150deg, rgb(223 170 188) 35%,rgb(220 220 220) 65%);
+    }
+    &.sectionBg2{
+      background-image: linear-gradient(150deg, rgb(170, 195, 223) 35%,rgb(220 220 220) 65%);
+    }
+  }
+}
+.sectionActive{
+  &::after {
+    width: 100%;
+    height: 30rem;
+    
+  }
+  .sectionBg{
+    transform: scale(1);
+    border-radius: 0;
+    opacity: .8;
+  }
 }
 .app {
   font-family: 'Nanum Myeongjo', serif;
@@ -36,6 +88,7 @@ canvas{
       width: 100%;
       position: fixed;
       top: 0;left: 0;
+      margin-top: 5rem;
       /* background: #ffffff13; */
       /* box-shadow: 0 2px 10px #ffffff71; */
       .container {
@@ -59,21 +112,38 @@ canvas{
                align-items: center;
 
                li {
-                position: relative;
-                z-index: 101;
+                  position: relative;
+                  z-index: 101;
                   width: 20rem;
-                  margin-top: 3.5rem;
+                  height: 100%;
                   text-align: center;
                   font-size: 2.3rem;
                   color: #fff;
                   text-shadow: 0px 2px 5px #000000bb;
+                  a{
+                    position: relative;
+                    z-index: 111;
+                    display: block;
+                    width: 100%;
+                    align-items: center;
+
+                  }
+                  .MenuActive{
+                    color: #000;
+                  }
+                  .MenuActiveR{
+                    color: #fd0808;
+                  }
+                  .MenuActiveB{
+                    color: #3508fd;
+                  }
                }
             }
          }
       }
    }
    //Section1
-   .Section1{
+   .section1{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -82,15 +152,15 @@ canvas{
     padding-top: 15rem;
     /* background: url(../public/img/back1.gif) no-repeat center/cover; */
     position: relative;
-    .sectionBg{
+    /* .sectionBg{
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      background: #1d1d1d;
+      background: #ddd;
       z-index: 2;
-    }
+    } */
     .container{z-index: 3;
     flex-direction: column;
       .intro{
@@ -100,7 +170,7 @@ canvas{
         color: #fff;
         font-weight: 400;
         position: relative;
-        
+        text-shadow: 0 2px 2px #000;
         animation-name: title1;
         animation-duration: 2s;
 
@@ -146,14 +216,14 @@ canvas{
         animation-direction: alternate;
         animation-fill-mode: both;
         .portfolioTitle{
-          color: rgba(255, 255, 255, 0.877);
+          color: #fff;
           font-size: 10rem;
           font-style: italic;
           letter-spacing:10px;
           /* font-family: 'Dancing Script', cursive; */
           /* font-family: 'Caveat', cursive; */
           font-weight: 400;
-          text-shadow: 0 2px 5px #ddd;
+          text-shadow: 0 2px 2px #000;
           
         }
       }
@@ -213,51 +283,17 @@ canvas{
     }
    }
     .section3{
-      z-index: 2222222222222;
-      .sectionBg1{
-       position: absolute;
-       top: 0;
-       left: 0;
-       transform-origin: 50% 50%;
-       width: 100%;
-       height: 100vh;
-       border-radius: 50%;
-       transform: scale(0);
-       transition: .5s linear;
-       
-       opacity: 0;
-       background-image: linear-gradient(150deg, rgb(223 170 188) 35%,rgb(220 220 220) 65%);
-      }
+      
+      
       
       .container{
         
       }
 
-      &::after {
-        content: "";
-        width: 90%;
-        height: 100vh;
-        position: absolute;
-        left: 50%;
-        background: #ffffff6c;
-        top: 50%;
-        transform: translate(-50%, -50%) ;
-        transition: .5s ; /* transform 속성에 대한 트랜지션 설정 */
-        z-index: 2222222222222;
-      }
       
-      &:hover {
-        &::after {
-          width: 100%;
-          height: 30rem;
-          ;/* 호버 상태에서 transform 값을 변경 */
-        }
-      }
-      &:hover .sectionBg1{
-        transform: scale(1);
-        border-radius: 0;
-        opacity: .8;
-      }
+      
+      
+     
     }
   }
 
