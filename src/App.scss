@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1800px;
   margin: 0 auto;
   .sectionTitle{
     z-index: 50;
@@ -65,12 +65,15 @@ canvas{
     &.sectionBg2{
       background-image: linear-gradient(150deg, rgb(170, 195, 223) 35%,rgb(220 220 220) 65%);
     }
+    &.sectionBg3{
+      background-image: linear-gradient(150deg, rgb(143, 143, 143) 35%,rgb(220 220 220) 65%);
+    }
   }
 }
 .sectionActive{
   &::after {
     width: 100%;
-    height: 30rem;
+    height: 50rem;
     
   }
   .sectionBg{
@@ -150,7 +153,8 @@ canvas{
     height: 100vh;
     padding: 50px;
     padding-top: 15rem;
-    /* background: url(../public/img/back1.gif) no-repeat center/cover; */
+    background: url(../public/img/skybackground.jpg) no-repeat center/cover;
+    
     position: relative;
     /* .sectionBg{
       width: 100%;
@@ -232,17 +236,19 @@ canvas{
    .section2{
     .container{
       flex-direction: column;
+      z-index: 60;
       .sectionTitle{height: 10%;}
       .aboutArea{
         display: flex;
+        justify-content: space-between;
         height: 90%;
         .myProfileImg{
-          width: 40%;
+          width: 35%;
           padding: 2rem;
           padding-left: 0;
           display: flex;
           align-items: center;
-          /* justify-content: center; */
+          justify-content: left;
           img{
             width: 100%;
             height: 100%;

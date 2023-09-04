@@ -1,8 +1,10 @@
 import React from 'react';
+import Scroll from './Scroll';
 
 const Section2 = () => {
    return (
-      <div className='section2 section'>
+      <Scroll sectionNum={2}>
+         <div className='sectionBg sectionBg3'></div>
          <div className='container'>
             <h2 className='sectionTitle'>About Me.</h2>
             <div className='aboutArea'>
@@ -37,7 +39,7 @@ const Section2 = () => {
                </div>
             </div>
          </div>
-      </div>
+      </Scroll>
    );
 };
 
