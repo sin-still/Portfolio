@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const Scroll = ({ children, sectionNum  }) => {
+const Scroll = ({ children, sectionNum, isSectionActive, setIsSectionActive }) => {
    const sectionRef = useRef(null);
-   const [isSectionActive, setIsSectionActive] = useState(false);
+   /* const [isSectionActive, setIsSectionActive] = useState(false); */
    useEffect(() => {
 
       const handleScroll = () => {
          const section = sectionRef.current;
          if (section) {
             const rect = section.getBoundingClientRect();
-            setIsSectionActive(rect.top <= 10 && rect.bottom > 0);
+            setIsSectionActive(rect.top <= 10 && rect.bottom > 400);
          }
       };
 
@@ -18,7 +18,7 @@ const Scroll = ({ children, sectionNum  }) => {
       return () => {
          window.removeEventListener('scroll', handleScroll);
       };
-   }, []);
+   }, [setIsSectionActive]);
 
    return (
       <div

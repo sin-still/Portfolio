@@ -1,9 +1,12 @@
+import { BsMouse } from "react-icons/bs"; 
 import React from 'react';
+import FlowText from './FlowText';
 
 const Section1 = () => {
    return (
       <div className='section1 section'>
          <div className='sectionBg'></div>
+         <FlowText />
          <div className='container'>
             {/* <div className="profilBox">
                <div className="profil-img">
@@ -24,6 +27,7 @@ const Section1 = () => {
             <div className='portfolio'>
                <h2 className='portfolioTitle'>Sinchul's <i>Portfolio</i></h2>
             </div>
+            <BsMouse className="mouse"/>
          </div>
       </div>
    );

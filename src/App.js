@@ -10,6 +10,7 @@ import Section4 from './component/Section4';
 
 
 
+
 export default function App() {  
 
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Section2/>
       <Section3/>
       <Section4/>
+      
     </div>
    );
 }
