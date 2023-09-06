@@ -1,10 +1,12 @@
 import { BsMouse } from "react-icons/bs"; 
-import React from 'react';
+
 import FlowText from './FlowText';
 
+
 const Section1 = () => {
+   
    return (
-      <div className='section1 section'>
+      <div  className='section1 section'>
          <div className='sectionBg'></div>
          <FlowText />
          <div className='container'>

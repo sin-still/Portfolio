@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Nanum+Myeongjo&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
+body{overflow: hidden;
+@media screen and (max-width:1850px){
+  overflow-y:hidden;
+  overflow-x:hidden;
+  
+}
+}
+
+body::-webkit-scrollbar { display:none; }
+
 .container{
   display: flex;
   justify-content: space-between;
@@ -8,21 +18,28 @@
   max-width: 1440px;
   margin: 0 auto;
   
+  
   .sectionTitle{
-    z-index: 50;
+    z-index: 46;
     color: #fff;
     letter-spacing: 5px;
     font-weight: normal;;
+    font-size: 4rem;
+    height: 7%;
+    position: absolute;
+    top: -5rem;
+    
+    margin-top: 9rem;
+    display: inline-block;
     
   }
 }
 
-.sectionTitle{
-  font-size: 4rem;
-  color: #a5a5a5;
-  margin-top: 9rem;
-  height: 7%;
-}
+/* .sectionTitle{
+  
+  
+  
+} */
 canvas{
   position: fixed;
   top: 0;
@@ -34,8 +51,8 @@ canvas{
   width: 100%;
   height: 100vh;
   padding: 5rem;
-  padding-top: 7rem;
-  z-index: 49;
+  padding-top: 15rem;
+  
   /* background: url(../public/img/back1.gif) no-repeat center/cover; */
   position: relative;
 }
@@ -83,7 +100,7 @@ canvas{
   }
   .sectionBg{
     transform: scale(1);
-
+    
     border-radius: 0;
     opacity: .8;
   }
@@ -110,36 +127,41 @@ canvas{
     }
     &:nth-child(1) {
       box-sizing: border-box;
-          margin-top: 5vh;
-          transform: rotate(-2deg);
-          background: none;
-          color: #ffffff41;
-          letter-spacing: 0;
-
-      }
-      &:nth-child(2) {
+      margin-top: 5vh;
+      transform: rotate(-2deg);
+      background: none;
+      color: #ffffff41;
+      letter-spacing: 0;
+      
+    }
+    &:nth-child(2) {
           display: none;
           transform: rotate(2deg);
           background: none;
           justify-content: flex-end;
           color: #fff;
           margin-bottom: 5vh;
+        }
       }
-  }
-}
-
-
-.app {
-  font-family: 'Nanum Myeongjo', serif;
-  //헤더
-  background: #ddd;
-   .header {
-      z-index: 55;
-      width: 100%;
-      position: fixed;
-      top: 0;left: 0;
-      margin-top: 5rem;
-      /* background: #ffffff13; */
+    }
+    
+    
+    .app {
+      font-family: 'Nanum Myeongjo', serif;
+      
+      .s-container{
+        margin-top: 7rem;
+      }
+      //헤더
+      background: #ddd;
+      .header {
+        z-index: 50;
+        width: 100%;
+        position: fixed;
+        top: 0;left: 0;
+        margin-top: 5rem;
+        
+        /* background: #ffffff13; */
       /* box-shadow: 0 2px 10px #ffffff71; */
       .container {
          
@@ -160,10 +182,11 @@ canvas{
                justify-content: right;
                list-style: none;
                align-items: center;
+               z-index: 2222;
 
                li {
                   position: relative;
-                  z-index: 101;
+                  z-index: 1021;
                   width: 20rem;
                   height: 100%;
                   text-align: center;
@@ -172,10 +195,11 @@ canvas{
                   text-shadow: 0px 2px 5px #000000bb;
                   a{
                     position: relative;
-                    z-index: 111;
+                    z-index: 112221;
                     display: block;
                     width: 100%;
                     align-items: center;
+                    
 
                   }
                   .MenuActive{
@@ -312,11 +336,14 @@ canvas{
       }
     }
     .container{
+      
       flex-direction: column;
-      z-index: 60;
+      
       justify-content: start;
-      .sectionTitle{height: 7%;}
+      
       .aboutArea{
+        
+        width: 100%;
         display: flex;
         justify-content: space-between;
         height: 70%;
@@ -325,6 +352,7 @@ canvas{
         transition-delay: .7s;
         position: relative;
         bottom: -10%;
+        z-index: 49;
         .myProfileImg{
           width: 35%;
           padding: 2rem;
@@ -383,7 +411,7 @@ canvas{
     .container{
       flex-direction: column;
       justify-content: start;
-      z-index: 60;
+      z-index: 48;
       .skillsArea{
         opacity: 0;
         position: relative;
@@ -418,9 +446,13 @@ canvas{
               margin-bottom: 5rem;
               .skills-title{
                 font-size: 3.5rem;
-                color: #818080;
+                color: #929292b7;
                 padding: 1rem;
                 text-align: center;
+                /* font-family: Georgia, 'Times New Roman', Times, serif; */
+                /* text-transform: uppercase; */
+                /* font-weight: normal; */
+                letter-spacing: 1.5px;
 
               }
               .item-list{
@@ -456,7 +488,13 @@ canvas{
     
     
     .container{
-      
+      flex-direction: column;
+      .projectArea{
+        width: 100%;
+        .project-content{
+          width: 100%;
+        }
+      }
     }
 
     

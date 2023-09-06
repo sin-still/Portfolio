@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+
 import Scroll from './Scroll';
 
 
 const Section2 = () => {
    const [isSectionActive, setIsSectionActive] = useState(false);
+
    return (
       <Scroll sectionNum={2} isSectionActive={isSectionActive} setIsSectionActive={setIsSectionActive}>
          
             <div className='sectionBg sectionBg3'></div>
          
-            <div className='container'>
+            <div className='container s-container'>
                <h2 className='sectionTitle'>About Me.</h2>
                <div className={`aboutArea ${isSectionActive ? 'activeAboutArea' : ''}`}>
                   <div className='myProfileImg'><img src="/img/profile.jpg" alt="" /></div>

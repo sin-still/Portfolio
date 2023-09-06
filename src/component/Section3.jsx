@@ -9,7 +9,7 @@ const Section3 = () => {
    return (
       <Scroll sectionNum={3} isSectionActive={isSectionActive} setIsSectionActive={setIsSectionActive}>
       <div className='sectionBg sectionBg1'></div>
-      <div className='container'>
+      <div className='container s-container'>
          <h2 className='sectionTitle'>Skills.</h2>
          <div className={`skillsArea ${isSectionActive ? 'activeskillsArea' : ''}`}>
             
