@@ -3,3 +3,15 @@
 html{
   font-size: calc(0.42vw + 2px);
 }
+
+/* @media screen and (max-width:1024px) {
+  html{
+    font-size: calc(0.42vw + 3px);
+  }  
+}
+
+@media screen and (max-width:768px) {
+  html{
+    font-size: calc(0.42vw + 4px);
+  }  
+} */

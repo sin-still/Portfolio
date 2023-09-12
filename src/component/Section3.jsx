@@ -33,24 +33,7 @@ const Section3 = () => {
                      <div className='skill-item'><img src="/img/skill/NextJS-Light.svg" alt="NextJS-Light" /></div>
                      </div>
                   </div>
-                  {/* <div className='skills-item'>
-                     <h3 className='skills-title'>Styling and Design</h3>
-                     <div className='item-list'>
-                     <div className='skill-item'><img src="/img/skill/HTML.svg" alt="css" /></div>
-                     <div className='skill-item'><img src="/img/skill/CSS.svg" alt="css" /></div>
-                     <div className='skill-item'><img src="/img/skill/Sass.svg" alt="sass" /></div>
-                     <div className='skill-item'><img src="/img/skill/Bootstrap.svg" alt="Bootstrap" /></div>
-                     </div>
-                  </div>
-                  <div className='skills-item'>
-                     <h3 className='skills-title'>Tools</h3>
-                     <div className='item-list'>
-                        <div className='skill-item'><img src="/img/skill/VisualStudio-Light.svg" alt="vs코드" /></div>
-                        <div className='skill-item'><img src="/img/skill/Figma-Light.svg" alt="피그마" /></div>
-                        <div className='skill-item'><img src="/img/skill/Git.svg" alt="깃" /></div>
-                        <div className='skill-item'><img src="/img/skill/Github-Light.svg" alt="깃허브" /></div>
-                     </div>
-                  </div> */}
+                  
                </div>
                <div className='skills-box'>
                   
