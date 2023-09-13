@@ -39,6 +39,19 @@ body::-webkit-scrollbar {
    display: none;
 }
 
+
+.deskMenu{display: none !important;}
+.mobileBtn{
+   display: none;
+   border: none;
+   background: none;
+   padding: 2rem;
+   font-size: 5rem;
+}
+
+
+
+
 .container {
    display: flex;
    justify-content: space-between;
@@ -185,10 +198,10 @@ canvas {
       position: fixed;
       top: 0;
       left: 0;
-      margin-top: 5rem;
+      margin-top: 5px;
 
       .container {
-         height: 7rem;
+         /* height: 7rem; */
          display: flex;
          justify-content: right;
          .logo {
@@ -201,6 +214,76 @@ canvas {
          .nav {
             height: 100%;
             ul {
+               &.mobileMenu{
+                  display: flex; 
+                  flex-direction: column; 
+                  position: absolute;
+                  top: 0;right: -100%; 
+                  width: 70%;
+                  background: #fff; 
+                  height: 100vh;
+                  transition: .5s;
+                  padding-top: 5%;
+                  align-items: center;
+                  li{
+                     display: flex;
+                     align-items: center;
+                     border-bottom: 1px solid #ddd;
+                     width: 100%;
+                     height: 15vh;
+                     transition: .5s;
+                     transition-property: background-image;
+                     &:nth-child(1){
+                        border-top: 1px solid #ddd;
+                        &:hover{
+                           background-image: url(../public/img/profile.jpg);
+                           background-repeat: no-repeat;
+                           background-size: cover;
+                           background-position: top;
+                        }
+                     }
+                     &:nth-child(2){
+                        
+                        &:hover{
+                           background-image: url(../public/img/profile.jpg);
+                           background-repeat: no-repeat;
+                           background-size: cover;
+                           background-position-y: 20%;
+                        }
+                     }
+                     &:nth-child(3){
+                        
+                        &:hover{
+                           background-image: url(../public/img/profile.jpg);
+                           background-repeat: no-repeat;
+                           background-size: cover;
+                           background-position-y: 30%;
+                        }
+                     }
+                     &:nth-child(4){
+                        
+                        &:hover{
+                           background-image: url(../public/img/profile.jpg);
+                           background-repeat: no-repeat;
+                           background-size: cover;
+                           background-position-y: 40%;
+                        }
+                     }
+                     &:nth-child(5){
+                        
+                        &:hover{
+                           background-image: url(../public/img/profile.jpg);
+                           background-repeat: no-repeat;
+                           background-size: cover;
+                           background-position-y: 50%;
+                        }
+                     }
+                     
+                  } 
+               }
+               &.mobileMenuSyle{
+                  right: 0;
+               }
                display: flex;
                height: 100%;
                justify-content: right;
@@ -235,6 +318,7 @@ canvas {
                   }
                }
             }
+            
          }
       }
    }
@@ -519,7 +603,6 @@ canvas {
          position: fixed;
          top: 0;
          left: 0;
-         margin-top: 5rem;
 
          .container {
             height: 7rem;
@@ -836,8 +919,22 @@ canvas {
 }
 @media screen and (max-width: 740px) {
    .app {
+      .mobileBtn{display: block;position: absolute;left: 0;}
+      .mobileMenu{display: block;}
       font-family: "Lato", sans-serif;
-
+      .sectionTitle {
+         z-index: 46;
+         color: #fff;
+         letter-spacing: 5px;
+         font-weight: normal;
+         font-size: 5rem;
+         height: 5rem;
+         position: absolute;
+         top: 5rem;
+   
+         margin-top: 9rem;
+         display: inline-block;
+      }
       .s-container {
          height: 70%;
          margin: auto;
@@ -850,7 +947,6 @@ canvas {
          position: fixed;
          top: 0;
          left: 0;
-         margin-top: 5rem;
 
          .container {
             height: 7rem;
@@ -999,19 +1095,7 @@ canvas {
             height: 85%;
             flex-direction: column;
             justify-content: start;
-            .sectionTitle {
-               z-index: 46;
-               color: #fff;
-               letter-spacing: 5px;
-               font-weight: normal;
-               font-size: 4rem;
-               height: 5rem;
-               position: absolute;
-               top: 5rem;
-         
-               margin-top: 9rem;
-               display: inline-block;
-            }
+            
             .aboutArea {
                width: 100%;
                height: 100%;
