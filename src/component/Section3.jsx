@@ -16,7 +16,7 @@ const Section3 = () => {
             <div className='skill-content'>
                <div className='skills-box'>
                   <div className='skills-item'>
-                     <h3 className='skills-title'>Programming Languages</h3>
+                     <h3 className='skills-title'>언어</h3>
                      <div className='item-list none'>
                      <div className='skill-item'><img src="/img/skill/JavaScript.svg" alt="JavaScript" /></div>
                      <div className='skill-item'><img src="/img/skill/TypeScript.svg" alt="TypeScript" /></div>
@@ -24,7 +24,7 @@ const Section3 = () => {
                      </div>
                   </div>
                   <div className='skills-item'>
-                     <h3 className='skills-title'>Frameworks and Libraries</h3>
+                     <h3 className='skills-title'>프레임워크 라이브러리</h3>
                      <div className='item-list'>
                      <div className='skill-item'><img src="/img/skill/JQuery.svg" alt="JQuery" /></div>
                      <div className='skill-item'><img src="/img/skill/React-Light.svg" alt="React-Light" /></div>
@@ -36,9 +36,8 @@ const Section3 = () => {
                   
                </div>
                <div className='skills-box'>
-                  
                   <div className='skills-item'>
-                     <h3 className='skills-title'>Styling and Design</h3>
+                     <h3 className='skills-title'>DESIGN</h3>
                      <div className='item-list'>
                      <div className='skill-item'><img src="/img/skill/HTML.svg" alt="css" /></div>
                      <div className='skill-item'><img src="/img/skill/CSS.svg" alt="css" /></div>
@@ -47,7 +46,7 @@ const Section3 = () => {
                      </div>
                   </div>
                   <div className='skills-item'>
-                     <h3 className='skills-title'>Tools</h3>
+                     <h3 className='skills-title'>TOOL</h3>
                      <div className='item-list'>
                         <div className='skill-item'><img src="/img/skill/VisualStudio-Light.svg" alt="vs코드" /></div>
                         <div className='skill-item'><img src="/img/skill/Figma-Light.svg" alt="피그마" /></div>
