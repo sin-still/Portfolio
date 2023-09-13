@@ -16,7 +16,7 @@ const Section3 = () => {
             <div className='skill-content'>
                <div className='skills-box'>
                   <div className='skills-item'>
-                     <h3 className='skills-title'>언어</h3>
+                     <h3 className='skills-title'>LANGUAGE</h3>
                      <div className='item-list none'>
                      <div className='skill-item'><img src="/img/skill/JavaScript.svg" alt="JavaScript" /></div>
                      <div className='skill-item'><img src="/img/skill/TypeScript.svg" alt="TypeScript" /></div>
@@ -24,7 +24,7 @@ const Section3 = () => {
                      </div>
                   </div>
                   <div className='skills-item'>
-                     <h3 className='skills-title'>프레임워크 라이브러리</h3>
+                     <h3 className='skills-title'>FRAMEWORK LIBRARY</h3>
                      <div className='item-list'>
                      <div className='skill-item'><img src="/img/skill/JQuery.svg" alt="JQuery" /></div>
                      <div className='skill-item'><img src="/img/skill/React-Light.svg" alt="React-Light" /></div>

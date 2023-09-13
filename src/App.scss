@@ -1,21 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @font-face {
-  font-family: 'omyu_pretty';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+   font-family: "omyu_pretty";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
+      format("woff2");
+   font-weight: normal;
+   font-style: normal;
 }
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+   font-family: "Pretendard-Regular";
+   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+      format("woff");
+   font-weight: 400;
+   font-style: normal;
 }
 @font-face {
-  font-family: 'SUIT-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+   font-family: "SUIT-Regular";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+      format("woff2");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "S-CoreDream-3Light";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+      format("woff");
+   font-weight: normal;
+   font-style: normal;
 }
 body {
    overflow: hidden;
@@ -89,7 +99,7 @@ canvas {
       &.sectionBg1 {
          background-image: linear-gradient(
             150deg,
-            rgb(223 170 188) 35%,
+            rgb(170, 223, 216) 35%,
             rgb(220 220 220) 65%
          );
       }
@@ -314,8 +324,8 @@ canvas {
       }
    }
    .section2 {
-      &.sectionActive::after{
-        height: 70%;
+      &.sectionActive::after {
+         height: 70%;
       }
       .container {
          flex-direction: column;
@@ -346,42 +356,43 @@ canvas {
                }
             }
             .myProfile {
-              width: 60%;
-              display: flex;
-              flex-direction: column;
-              font-family: 'Pretendard-Regular';
-              .myProfileText {
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-                 font-size: 4rem;
-                 text-align: center;
-                 font-weight: bold;
-                 padding: 5rem 3rem 0;
-                 margin-bottom: 4.5rem;
-              }
-              .myProfileInfo {
-                 display: flex;
-                 padding-bottom: 3rem;
-                 padding: 2.5rem;
-                 flex-wrap: wrap;
-                 .ProfileInfoItem{
-                  width: 50%;
+               width: 60%;
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+               font-family: "S-CoreDream-3Light";
+               .myProfileText {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 4rem;
+                  text-align: center;
+                  font-weight: bold;
+                  height: 20%;
+               }
+               .myProfileInfo {
+                  display: flex;
                   padding-bottom: 3rem;
-                  .infoTitle {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
-                    margin-top: 2rem;
-                    
+                  padding: 2.5rem;
+                  flex-wrap: wrap;
+                  height: 80%;
+                  .ProfileInfoItem {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     width: 50%;
+
+
+                     .infoTitle {
+                        font-size: 3rem;
+                        padding-bottom: 1.5rem;
+                     }
+                     .infoText {
+                        font-size: 2.7rem;
+                     }
                   }
-                 .infoText {
-                    font-size: 2.7rem;
-                    padding-left: 0.5rem;
-                  }
-                 }
-                 
-              }
-           }
+               }
+            }
          }
          .activeAboutArea {
             opacity: 1;
@@ -390,19 +401,18 @@ canvas {
       }
    }
    .section3 {
-    font-family: 'SUIT-Regular';
-    text-transform: uppercase;
+      font-family: "SUIT-Regular";
+      text-transform: uppercase;
       .container {
          flex-direction: column;
          justify-content: start;
          z-index: 48;
          .skillsArea {
-           position: relative;
-           bottom: -10%;
-           width: 100%;
-           height: 100%;
-           padding-top: 5rem;
-           opacity: 0;
+            position: relative;
+            bottom: -10%;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
             transition: 0.7s;
             transition-delay: 0.7s;
             &.activeskillsArea {
@@ -413,29 +423,30 @@ canvas {
                display: flex;
                height: 100%;
                @media screen and (max-width: 580px) {
-                  width: 100%;
                   flex-direction: column;
+                  width: 100%;
                   height: 50%;
                }
                .skills-box {
                   display: flex;
                   flex-direction: column;
-                  height: 100%;
+                  justify-content: center;
+                  align-content: center;
                   width: 50%;
+                  height: 100%;
                   box-sizing: border-box;
                   @media screen and (max-width: 580px) {
                      width: 100%;
                   }
                   .skills-item {
                      height: 50%;
-                     margin-bottom: 5rem;
                      .skills-title {
                         font-size: 3.5rem;
-                        color: #fff;
                         text-shadow: 0 2px 5px #868686;
-                        padding: 1rem;
-                        text-align: center;
                         letter-spacing: 1.5px;
+                        color: #fff;
+                        text-align: center;
+                        padding: 1rem;
                         margin-bottom: 3rem;
                      }
                      .item-list {
@@ -443,11 +454,11 @@ canvas {
                         flex-wrap: wrap;
                         justify-content: center;
                         padding: 2rem;
-                        
+
                         .skill-item {
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
+                           display: flex;
+                           align-items: center;
+                           justify-content: center;
                            width: 15%;
                            height: 100%;
                            margin-right: 2rem;
@@ -478,288 +489,699 @@ canvas {
 }
 
 /* 반응형1440 */
-@media screen and (max-width:1440px) {
-  .container{
-    padding: 5rem;
-  }
-  
+@media screen and (max-width: 1440px) {
+   .container {
+      padding: 5rem;
+   }
+   .app{
+      .header{
+         .container{
+            padding: 0;
+         }
+      }
+   }
 }
 
-
 /* 반응형940 */
-@media screen and (max-width:940px) {
-  .app {
-    font-family: "Lato", sans-serif;
- 
-    .s-container {
-       height: 70%;
-       margin: auto;
-    }
-    //헤더
-    background: #ddd;
-    .header {
-       z-index: 50;
-       width: 100%;
-       position: fixed;
-       top: 0;
-       left: 0;
-       margin-top: 5rem;
- 
-       .container {
-          height: 7rem;
-          display: flex;
-          justify-content: right;
-          .logo {
-             width: 25rem;
-             background: url(../public/img/logo1.png) no-repeat center
-                center/100%;
-             height: 100%;
-             filter: invert(100) brightness(0.8);
-          }
-          .nav {
-             height: 100%;
-             ul {
-                display: flex;
-                height: 100%;
-                justify-content: right;
-                list-style: none;
-                align-items: center;
-                z-index: 2222;
- 
-                li {
-                   position: relative;
-                   z-index: 1021;
-                   width: 20rem;
-                   height: 100%;
-                   text-align: center;
-                   font-size: 2.3rem;
-                   color: #fff;
-                   text-shadow: 0px 2px 5px #000000bb;
-                   a {
-                      position: relative;
-                      z-index: 112221;
-                      display: block;
-                      width: 100%;
-                      align-items: center;
-                   }
-                   .MenuActive {
-                      color: #000;
-                   }
-                   .MenuActiveR {
-                      color: #fd0808;
-                   }
-                   .MenuActiveB {
-                      color: #3508fd;
-                   }
-                }
-             }
-          }
-       }
-    }
-    //Section1
-    .section1 {
-       justify-content: space-between;
-       padding: 50px;
-       padding-top: 15rem;
-       background: #ddd;
-       background: url(../public/img/skybackground.jpg) no-repeat center/cover;
-       position: relative;
- 
-       .container {
-          z-index: 3;
-          flex-direction: column;
-          .mouse {
-             position: absolute;
-             bottom: 5%;
-             left: 50%;
-             font-size: 3rem;
-             color: #00000054;
-             animation: move 0.7s alternate infinite;
-          }
-          .intro {
-             width: 100%;
-             text-align: right;
-             padding-right: 7%;
-             margin-top: 3.5%;
-             font-weight: 400;
-             position: relative;
- 
-             animation-name: title1;
-             animation-duration: 2s;
- 
-             h2 {
-                font-weight: bold;
- 
-                margin-left: 3rem;
-                margin-bottom: 20px;
-                color: #ffffff;
-                text-shadow: 0 4px 5px #00000054;
-                font-size: 13rem;
-                position: relative;
-                display: inline-block;
-                &.firstTitle {
-                   right: 200%;
-                }
-                &.secondTitle {
-                   left: 200%;
-                }
-                strong {
-                   font-size: 10rem;
-                   font-weight: 700;
-                }
-             }
-          }
-          .portfolio {
-             /* background: beige; */
-             height: 30%;
-             display: flex;
-             align-items: center;
-             justify-content: start;
-             opacity: 0;
-             animation-name: title2;
-             animation-delay: 2s;
-             animation-duration: 2s;
-             animation-iteration-count: 1;
-             animation-timing-function: linear;
-             animation-direction: alternate;
-             animation-fill-mode: both;
-             .portfolioTitle {
-                color: #fff;
-                font-size: 6rem;
-                font-style: italic;
-                padding-left: 5%;
-                letter-spacing: 10px;
-                /* font-family: 'Dancing Script', cursive; */
-                /* font-family: 'Caveat', cursive; */
-                font-weight: 700;
-                text-shadow: 0 2px 2px #22222288;
-                /* background: linear-gradient(to right top, #41d8bf, #f588ff);
+@media screen and (max-width: 940px) {
+   .app {
+      font-family: "Lato", sans-serif;
+
+      .s-container {
+         height: 70%;
+         margin: auto;
+      }
+      //헤더
+      background: #ddd;
+      .header {
+         z-index: 50;
+         width: 100%;
+         position: fixed;
+         top: 0;
+         left: 0;
+         margin-top: 5rem;
+
+         .container {
+            height: 7rem;
+            display: flex;
+            justify-content: right;
+            padding: 0;
+            .logo {
+               width: 25rem;
+               background: url(../public/img/logo1.png) no-repeat center
+                  center/100%;
+               height: 100%;
+               filter: invert(100) brightness(0.8);
+            }
+            .nav {
+               height: 100%;
+               ul {
+                  display: flex;
+                  height: 100%;
+                  justify-content: right;
+                  list-style: none;
+                  align-items: center;
+                  z-index: 2222;
+
+                  li {
+                     position: relative;
+                     z-index: 1021;
+                     width: 20rem;
+                     height: 100%;
+                     text-align: center;
+                     font-size: 2.3rem;
+                     color: #fff;
+                     text-shadow: 0px 2px 5px #000000bb;
+                     a {
+                        position: relative;
+                        z-index: 112221;
+                        display: block;
+                        width: 100%;
+                        align-items: center;
+                     }
+                     .MenuActive {
+                        color: #000;
+                     }
+                     .MenuActiveR {
+                        color: #fd0808;
+                     }
+                     .MenuActiveB {
+                        color: #3508fd;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      //Section1
+      .section1 {
+         justify-content: space-between;
+         padding: 50px;
+         padding-top: 15rem;
+         background: #ddd;
+         background: url(../public/img/skybackground.jpg) no-repeat center/cover;
+         position: relative;
+
+         .container {
+            z-index: 3;
+            flex-direction: column;
+            .mouse {
+               position: absolute;
+               bottom: 5%;
+               left: 50%;
+               font-size: 3rem;
+               color: #00000054;
+               animation: move 0.7s alternate infinite;
+            }
+            .intro {
+               width: 100%;
+               text-align: right;
+               padding-right: 7%;
+               margin-top: 3.5%;
+               font-weight: 400;
+               position: relative;
+
+               animation-name: title1;
+               animation-duration: 2s;
+
+               h2 {
+                  font-weight: bold;
+
+                  margin-left: 3rem;
+                  margin-bottom: 20px;
+                  color: #ffffff;
+                  text-shadow: 0 4px 5px #00000054;
+                  font-size: 13rem;
+                  position: relative;
+                  display: inline-block;
+                  &.firstTitle {
+                     right: 200%;
+                  }
+                  &.secondTitle {
+                     left: 200%;
+                  }
+                  strong {
+                     font-size: 10rem;
+                     font-weight: 700;
+                  }
+               }
+            }
+            .portfolio {
+               /* background: beige; */
+               height: 30%;
+               display: flex;
+               align-items: center;
+               justify-content: start;
+               opacity: 0;
+               animation-name: title2;
+               animation-delay: 2s;
+               animation-duration: 2s;
+               animation-iteration-count: 1;
+               animation-timing-function: linear;
+               animation-direction: alternate;
+               animation-fill-mode: both;
+               .portfolioTitle {
+                  color: #fff;
+                  font-size: 6rem;
+                  font-style: italic;
+                  padding-left: 5%;
+                  letter-spacing: 10px;
+                  /* font-family: 'Dancing Script', cursive; */
+                  /* font-family: 'Caveat', cursive; */
+                  font-weight: 700;
+                  text-shadow: 0 2px 2px #22222288;
+                  /* background: linear-gradient(to right top, #41d8bf, #f588ff);
            color: transparent;
            background-clip: text;
            -webkit-background-clip: text; */
-             }
-          }
-       }
-    }
-    .section2 {
-      &.sectionActive::after{
-      }
-      .container {
-         .aboutArea {
-            .myProfileImg {
-               img {
                }
             }
-            .myProfile {
-              .myProfileText {
-              }
-              .myProfileInfo {
-                 .ProfileInfoItem{
-                   padding-left: 3rem;
-                  width: 100%;
-                  padding-bottom: 5rem;
-                  .infoTitle {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
-                    margin-top: 2rem;
-                    
-                  }
-                 .infoText {
-                    font-size: 2.7rem;
-                    padding-left: 0.5rem;
-                  }
-                 }
-                 
-              }
-           }
-         }
-         .activeAboutArea {
-            opacity: 1;
-            bottom: 0;
          }
       }
-    }
-    .section3 {
-       .container {
-          flex-direction: column;
-          justify-content: start;
-          z-index: 48;
-          .skillsArea {
-             opacity: 0;
-             position: relative;
-             bottom: -10%;
-             transition: 0.7s;
-             transition-delay: 0.7s;
-             height: 80%;
-             &.activeskillsArea {
-                opacity: 1;
-                bottom: 0;
-             }
-             .skill-content {
-                display: flex;
-                height: 100%;
-                @media screen and (max-width: 580px) {
-                   width: 100%;
-                   flex-direction: column;
-                   height: 50%;
-                }
-                .skills-box {
-                   display: flex;
-                   flex-direction: column;
-                   height: 100%;
-                   width: 50%;
-                   box-sizing: border-box;
-                   @media screen and (max-width: 580px) {
-                      width: 100%;
-                   }
-                   .skills-item {
-                      height: 50%;
-                      margin-bottom: 5rem;
-                      .skills-title {
-                         font-size: 3.5rem;
-                         color: #929292b7;
-                         padding: 1rem;
-                         text-align: center;
-                         letter-spacing: 1.5px;
-                      }
-                      .item-list {
-                         display: flex;
-                         height: 70%;
-                         padding: 2rem;
-                         box-sizing: border-box;
-                         flex-wrap: wrap;
-                         justify-content: center;
-                         .skill-item {
-                            width: 15%;
-                            height: 100%;
-                            margin-right: 2rem;
-                            img {
-                               width: 100%;
-                            }
-                         }
-                      }
-                   }
-                }
-             }
-          }
-       }
-    }
-    .section4 {
-       flex-direction: column;
- 
-       .container {
-          flex-direction: column;
-          .projectArea {
-             width: 100%;
-             .project-content {
-                width: 100%;
-             }
-          }
-       }
-    }
- }
-}
+      .section2 {
+         &.sectionActive::after {
+            height: 70%;
+         }
+         .container {
+            flex-direction: column;
+            justify-content: start;
+            .aboutArea {
+               width: 100%;
+               height: 100%;
+               display: flex;
+               justify-content: space-between;
+               opacity: 0;
+               transition: 0.7s;
+               transition-delay: 0.7s;
+               position: relative;
+               bottom: -10%;
+               z-index: 49;
+               .myProfileImg {
+                  height: 100%;
+                  padding: 2rem;
+                  padding-left: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: right;
+                  img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     border-radius: 15px;
+                  }
+               }
+               .myProfile {
+                  width: 60%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  font-family: "S-CoreDream-3Light";
+                  .myProfileText {
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     font-size: 4rem;
+                     text-align: center;
+                     font-weight: bold;
+                     height: 20%;
+                  }
+                  .myProfileInfo {
+                     display: flex;
+                     padding-bottom: 3rem;
+                     padding: 2.5rem;
+                     flex-wrap: wrap;
+                     height: 80%;
+                     .ProfileInfoItem {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 50%;
+   
+   
+                        .infoTitle {
+                           font-size: 3rem;
+                           padding-bottom: 1.5rem;
+                        }
+                        .infoText {
+                           font-size: 2.7rem;
+                        }
+                     }
+                  }
+               }
+            }
+            .activeAboutArea {
+               opacity: 1;
+               bottom: 0;
+            }
+         }
+      }
+      .section3 {
+         font-family: "SUIT-Regular";
+         text-transform: uppercase;
+         .container {
+            flex-direction: column;
+            justify-content: start;
+            z-index: 48;
+            .skillsArea {
+               position: relative;
+               bottom: -10%;
+               width: 100%;
+               height: 100%;
+               opacity: 0;
+               transition: 0.7s;
+               transition-delay: 0.7s;
+               &.activeskillsArea {
+                  opacity: 1;
+                  bottom: 0;
+               }
+               .skill-content {
+                  display: flex;
+                  height: 100%;
+                  @media screen and (max-width: 780px) {
+                     flex-direction: column;
+                     width: 100%;
+                     height: 100%;
+                  }
+                  .skills-box {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-content: center;
+                     width: 50%;
+                     height: 100%;
+                     box-sizing: border-box;
+                     @media screen and (max-width: 780px) {
+                        width: 100%;
+                     }
+                     .skills-item {
+                        height: 50%;
+                        .skills-title {
+                           font-size: 3.5rem;
+                           text-shadow: 0 2px 5px #868686;
+                           letter-spacing: 1.5px;
+                           color: #fff;
+                           text-align: center;
+                           padding: 1rem;
+                           margin-bottom: 3rem;
+                           @media screen and (max-width: 780px) {
+                              padding: 0;
+                              padding-bottom: .2rem;
+                           }
+                        }
+                        .item-list {
+                           display: flex;
+                           flex-wrap: wrap;
+                           justify-content: center;
+                           padding: 2rem;
+                           @media screen and (max-width: 780px) {
+                              padding: 0;
+                              
+                           }
+                           
+                           .skill-item {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 15%;
+                              height: 100%;
+                              margin-right: 2rem;
+                              @media screen and (max-width: 780px) {
+                                 width: 8.7%;
+                              }
+                              img {
+                                 width: 100%;
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .section4 {
+         flex-direction: column;
 
+         .container {
+            flex-direction: column;
+            .projectArea {
+               width: 100%;
+               .project-content {
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 740px) {
+   .app {
+      font-family: "Lato", sans-serif;
+
+      .s-container {
+         height: 70%;
+         margin: auto;
+      }
+      //헤더
+      background: #ddd;
+      .header {
+         z-index: 50;
+         width: 100%;
+         position: fixed;
+         top: 0;
+         left: 0;
+         margin-top: 5rem;
+
+         .container {
+            height: 7rem;
+            display: flex;
+            justify-content: right;
+            padding: 0;
+            
+            .logo {
+               width: 25rem;
+               background: url(../public/img/logo1.png) no-repeat center
+                  center/100%;
+               height: 100%;
+               filter: invert(100) brightness(0.8);
+            }
+            .nav {
+               height: 100%;
+               ul {
+                  display: flex;
+                  height: 100%;
+                  justify-content: right;
+                  list-style: none;
+                  align-items: center;
+                  z-index: 2222;
+
+                  li {
+                     position: relative;
+                     z-index: 1021;
+                     width: 20rem;
+                     height: 100%;
+                     text-align: center;
+                     font-size: 2.3rem;
+                     color: #fff;
+                     text-shadow: 0px 2px 5px #000000bb;
+                     a {
+                        position: relative;
+                        z-index: 112221;
+                        display: block;
+                        width: 100%;
+                        align-items: center;
+                     }
+                     .MenuActive {
+                        color: #000;
+                     }
+                     .MenuActiveR {
+                        color: #fd0808;
+                     }
+                     .MenuActiveB {
+                        color: #3508fd;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      //Section1
+      .section1 {
+         justify-content: space-between;
+         padding: 50px;
+         padding-top: 15rem;
+         background: #ddd;
+         background: url(../public/img/skybackground.jpg) no-repeat center/cover;
+         position: relative;
+
+         .container {
+            z-index: 3;
+            flex-direction: column;
+            .mouse {
+               position: absolute;
+               bottom: 5%;
+               left: 50%;
+               font-size: 3rem;
+               color: #00000054;
+               animation: move 0.7s alternate infinite;
+            }
+            .intro {
+               width: 100%;
+               text-align: right;
+               padding-right: 7%;
+               margin-top: 3.5%;
+               font-weight: 400;
+               position: relative;
+
+               animation-name: title1;
+               animation-duration: 2s;
+
+               h2 {
+                  font-weight: bold;
+
+                  margin-left: 3rem;
+                  margin-bottom: 20px;
+                  color: #ffffff;
+                  text-shadow: 0 4px 5px #00000054;
+                  font-size: 13rem;
+                  position: relative;
+                  display: inline-block;
+                  &.firstTitle {
+                     right: 200%;
+                  }
+                  &.secondTitle {
+                     left: 200%;
+                  }
+                  strong {
+                     font-size: 10rem;
+                     font-weight: 700;
+                  }
+               }
+            }
+            .portfolio {
+               /* background: beige; */
+               height: 30%;
+               display: flex;
+               align-items: center;
+               justify-content: start;
+               opacity: 0;
+               animation-name: title2;
+               animation-delay: 2s;
+               animation-duration: 2s;
+               animation-iteration-count: 1;
+               animation-timing-function: linear;
+               animation-direction: alternate;
+               animation-fill-mode: both;
+               .portfolioTitle {
+                  color: #fff;
+                  font-size: 6rem;
+                  font-style: italic;
+                  padding-left: 5%;
+                  letter-spacing: 10px;
+                  /* font-family: 'Dancing Script', cursive; */
+                  /* font-family: 'Caveat', cursive; */
+                  font-weight: 700;
+                  text-shadow: 0 2px 2px #22222288;
+                  /* background: linear-gradient(to right top, #41d8bf, #f588ff);
+           color: transparent;
+           background-clip: text;
+           -webkit-background-clip: text; */
+               }
+            }
+         }
+      }
+      .section2 {
+         height: 200vh;
+         &.sectionActive::after {
+            height: 85%;
+         }
+         .container {
+            height: 85%;
+            flex-direction: column;
+            justify-content: start;
+            .sectionTitle {
+               z-index: 46;
+               color: #fff;
+               letter-spacing: 5px;
+               font-weight: normal;
+               font-size: 4rem;
+               height: 5rem;
+               position: absolute;
+               top: 5rem;
+         
+               margin-top: 9rem;
+               display: inline-block;
+            }
+            .aboutArea {
+               width: 100%;
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               opacity: 0;
+               transition: 0.7s;
+               transition-delay: 0.7s;
+               position: relative;
+               bottom: -10%;
+               z-index: 49;
+               .myProfileImg {
+                  width: 100%;
+                  padding: 2rem;
+                  padding-left: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: right;
+                  img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     border-radius: 15px;
+                  }
+               }
+               .myProfile {
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  font-family: "S-CoreDream-3Light";
+                  .myProfileText {
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     font-size: 4rem;
+                     text-align: center;
+                     font-weight: bold;
+                     height: 20%;
+                  }
+                  .myProfileInfo {
+                     display: flex;
+                     padding-bottom: 3rem;
+                     padding: 2.5rem;
+                     flex-wrap: wrap;
+                     height: 80%;
+                     .ProfileInfoItem {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 50%;
+   
+   
+                        .infoTitle {
+                           font-size: 3rem;
+                           padding-bottom: 1.5rem;
+                        }
+                        .infoText {
+                           font-size: 2.7rem;
+                        }
+                     }
+                  }
+               }
+            }
+            .activeAboutArea {
+               opacity: 1;
+               bottom: 0;
+            }
+         }
+      }
+      .section3 {
+         font-family: "SUIT-Regular";
+         text-transform: uppercase;
+         .container {
+            flex-direction: column;
+            justify-content: start;
+            z-index: 48;
+            .skillsArea {
+               position: relative;
+               bottom: -10%;
+               width: 100%;
+               height: 100%;
+               opacity: 0;
+               transition: 0.7s;
+               transition-delay: 0.7s;
+               &.activeskillsArea {
+                  opacity: 1;
+                  bottom: 0;
+               }
+               .skill-content {
+                  display: flex;
+                  height: 100%;
+                  @media screen and (max-width: 780px) {
+                     flex-direction: column;
+                     width: 100%;
+                     height: 100%;
+                  }
+                  .skills-box {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-content: center;
+                     width: 50%;
+                     height: 100%;
+                     box-sizing: border-box;
+                     @media screen and (max-width: 780px) {
+                        width: 100%;
+                     }
+                     .skills-item {
+                        height: 50%;
+                        .skills-title {
+                           font-size: 3.5rem;
+                           text-shadow: 0 2px 5px #868686;
+                           letter-spacing: 1.5px;
+                           color: #fff;
+                           text-align: center;
+                           padding: 1rem;
+                           margin-bottom: 3rem;
+                           @media screen and (max-width: 780px) {
+                              padding: 0;
+                              padding-bottom: .2rem;
+                           }
+                        }
+                        .item-list {
+                           display: flex;
+                           flex-wrap: wrap;
+                           justify-content: center;
+                           padding: 2rem;
+                           @media screen and (max-width: 780px) {
+                              padding: 0;
+                              
+                           }
+                           
+                           .skill-item {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 15%;
+                              height: 100%;
+                              margin-right: 2rem;
+                              @media screen and (max-width: 780px) {
+                                 width: 8.7%;
+                              }
+                              img {
+                                 width: 100%;
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .section4 {
+         flex-direction: column;
+
+         .container {
+            flex-direction: column;
+            .projectArea {
+               width: 100%;
+               .project-content {
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}
 
 /* 애니메이션 */
 @keyframes title1 {

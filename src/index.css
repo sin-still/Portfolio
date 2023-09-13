@@ -1,4 +1,6 @@
-*{padding: 0; margin: 0; box-sizing: border-box;}
+*{padding: 0; margin: 0; }
+
+div,p,h1,h2,h3,em,strong{box-sizing: border-box;}
 
 html{
   font-size: calc(0.42vw + 2px);
