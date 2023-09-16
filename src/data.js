@@ -1,5 +1,6 @@
 const data = [
    {
+      image:"/img/NEXTPROJECT.png",
       title: "VIVID",
       skill: [
          "/img/skill/React-Light.svg",
@@ -13,6 +14,7 @@ const data = [
       des: "넥스트와 버셀 몽고DB를 활용하여 회원가입, 로그인, 댓글, 문의, 카트 기능을 구현하였습니다.",
    },
    {
+      image:"/img/SOSOMIRA.png",
       title: "SOSOMIRA",
       skill: [
          "/img/skill/React-Light.svg",
@@ -27,6 +29,7 @@ const data = [
    },
 
    {
+      image:"/img/PRINTBAYKERY.png",
       title: "MOVI",
       skill: [
          "/img/skill/React-Light.svg",
@@ -39,6 +42,7 @@ const data = [
       des: "API와 데이터 학습을 위해 API를 통해 데이터를 불러오고 배치해서 사용한 사이트입니다.",
    },
    {
+      image:'/img/PRINTBAYKERY.png',
       title: "FRINT BAYKERY",
       skill: [
          "/img/skill/HTML.svg",
@@ -49,9 +53,10 @@ const data = [
       personnel: 1,
       part: "프론트전반",
       desTitle: "첫 반응형 클론코딩 프로젝트입니다",
-      des: "calc와 rem을 사용하고 페이지새로고침시 랜덤으로 이미지가 바뀌는 로직을 구현하였습니다. ",
+      des: "반응형의 기초를 다듬고 flex 를 사용해 제작하였습니다. 페이지새로고침시 랜덤으로 이미지가 바뀌는 로직을 구현하였습니다. ",
    },
    {
+      image:'/img/KOREA.png',
       title: "한국에너지기술연구원",
       skill: [
          "/img/skill/HTML.svg",
@@ -62,7 +67,7 @@ const data = [
       personnel: 1,
       part: "프론트전반",
       desTitle: "코딩을 접하고 처음 만든 관공서 클론코딩 사이트 입니다",
-      des: "탭 기능과 액티브 슬라이드를 직접 자바스크립트와 제이쿼리를 사용하여 구현하였습니다",
+      des: "탭 기능과 슬라이드를 직접 자바스크립트와 제이쿼리를 사용하여 구현하였습니다",
    },
 ]
 

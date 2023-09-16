@@ -35,7 +35,7 @@ const Section2 = () => {
                         <div className='ProfileInfoItem'>
                         <h3 className='infoTitle'>교육</h3>
                            <p className='infoText'>
-                              더휴먼컴퓨터아카데미 
+                              더휴먼컴퓨터아카데미 (산대특) REACT,Vue + 프레임워크 기반 프론트엔드 개발 양성 지원과정
                            </p>
                         </div>
                         <div className='ProfileInfoItem'>
