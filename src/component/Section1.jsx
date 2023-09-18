@@ -1,6 +1,7 @@
 import { BsMouse } from "react-icons/bs"; 
 
 import FlowText from './FlowText';
+import TypingTitle from "./TextTyping";
 
 
 const Section1 = () => {
@@ -27,7 +28,7 @@ const Section1 = () => {
                </p>
             </div>
             <div className='portfolio'>
-               <h2 className='portfolioTitle'>Sinchul's <i>Portfolio</i></h2>
+               <h2 className='portfolioTitle'><TypingTitle completionWord={'PORTFOLIO'}></TypingTitle></h2>
             </div>
             <BsMouse className="mouse"/>
          </div>

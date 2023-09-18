@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Scroll = ({ children, sectionNum, isSectionActive, setIsSectionActive }) => {
    const sectionRef = useRef(null);
