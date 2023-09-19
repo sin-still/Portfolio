@@ -12,7 +12,7 @@ const Section4 = () => {
       <div className='sectionBg sectionBg2'></div>
       <div className='container s-container'>
          <h2 className='sectionTitle'>Project.</h2>
-         <div className='projectArea'>
+         <div className={`projectArea ${isSectionActive ? 'projectActive' : null }`}>
             <div className='project-content'>
            
                <ProjectSwiper></ProjectSwiper>

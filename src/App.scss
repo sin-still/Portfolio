@@ -112,14 +112,14 @@ canvas {
       &.sectionBg1 {
          background-image: linear-gradient(
             150deg,
-            rgb(170, 223, 216) 35%,
+            rgb(37, 87, 80) 35%,
             rgb(220 220 220) 65%
          );
       }
       &.sectionBg2 {
          background-image: linear-gradient(
             150deg,
-            rgb(170, 195, 223) 35%,
+            rgb(20, 54, 92) 35%,
             rgb(220 220 220) 65%
          );
       }
@@ -578,6 +578,11 @@ canvas {
          .projectArea {
             width: 100%;
             height: 100%;
+            opacity: 0;
+            transition-delay:.6s;
+            &.projectActive{
+               opacity: 1;
+            }
             .project-content {
                width: 100%;
                height: 100%;
@@ -609,6 +614,43 @@ canvas {
                   height: 100%;
                   padding: 2rem;
                   box-sizing: border-box;
+                  align-items: center;
+                  justify-content: center;
+                  position: relative;
+                  &.activeBefore{
+                     opacity: 0;
+                     transition: 1s;
+                     transition-delay: .5s;
+                     &.active{
+                        opacity: 1;
+                     }
+                  }
+                  .circle{
+                     width: 80%;
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%,-50%);
+                     img{
+                        width: 100%;
+                     }
+                     .circleImg{
+                        animation-name: rotate;
+                        animation-iteration-count: infinite;
+                        animation-duration: 15s;
+                        animation-timing-function: linear;
+                     }
+                  }
+                  .qrCode{
+                     width: 30%;
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%,-50%);
+                     img{
+                        width: 100%;
+                     }
+                  }
                   .contactForm{
                      width: 100%;
                      height: 100%;
@@ -617,6 +659,11 @@ canvas {
                      flex-direction: column;
                      padding: 2rem;
                      background: #fff;
+                     opacity: 0;
+                     transition: 1.5s;
+                     &.active{
+                        opacity: 1;
+                     }
                      .formLabel{
                         font-size: 2rem;
                         margin-bottom: 1rem;
@@ -1377,5 +1424,11 @@ canvas {
    }
    100% {
       bottom: 6%;
+   }
+}
+@keyframes rotate {
+   0% {
+      transform: rotate(0);
+      transform: rotate(360deg);
    }
 }

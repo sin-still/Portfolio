@@ -4,13 +4,8 @@
    font-weight: normal;
    font-style: normal;
 }
-.flexBox{
-   display: flex;
-   .flexItem{
-      width: 50%;
-   }
-}
 .swiper-pagination-horizontal{
+   
 }
 .swiper-slide{
    position: relative;
@@ -33,79 +28,94 @@
    font-size: 2.5rem;
    color: #4b4b4b;
    height: 10%;
-
+   
 }
 .project-item{
    display: flex;
    height: 90%;
    
-}
-.project-imgBox{
-   width: 50%;
-
-   .project-img{
-      &.project-img::-webkit-scrollbar{
-         display: none;
-      }
-      margin: 0 auto;
-      width: 80%;
-      padding: 0 4rem;
-      height: 100%;
-      overflow: hidden;
-      img{
-         width: 100%;
-
-      }
-   }
-}
-.project-info{
-   width: 50%;
-   .infoTitle{
-      color: #000;
-      font-size: 2rem;
-      display: inline-block;
-      position: relative;padding: 5px 0px;
-      padding-left: .5rem;
+   .project-imgBox{
+      width: 50%;
       
-      &::after{
-         position: absolute;
-         left: 0;
-         bottom: 0;
-         content: "";
-         width: 140%;
-         height: 2px;
-         border-radius: 50%;
-         background: #fff;
+      .project-img{
+         
+         &.project-img::-webkit-scrollbar{
+            display: none;
+         }
+         margin: 0 auto;
+         width: 80%;
+         padding: 0 4rem;
+         height: 100%;
+         overflow: hidden;
+         a{
+            display: block;
+            
+            img{
+               width: 100%;
+               
+            }
+         }
       }
    }
-}
-.info-item{
-   display: flex;
-   padding: 2rem 1rem;
-   font-size: 1.7rem;
-
-   img{
-      padding: 1rem;
-      width: 6.4rem;
-      height: 6.4rem;
-   }
-}
-.linkBox{
-   width: 100%;
-   padding-top: 2rem;
-   text-align: right;
-   .infoTitle{
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      font-size: 2rem;
-      padding-right: 1rem;
-      transition: .2s;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      &:hover{
-         transform: rotate(-10deg);
+   .project-info{
+      width: 50%;
+      /* 인포타이틀 */
+      .infoTitle{
+         color: #000;
+         font-size: 2rem;
+         display: inline-block;
+         position: relative;padding: 5px 0px;
+         padding-left: .5rem;
+         
+         &::after{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: "";
+            width: 140%;
+            height: 2px;
+            border-radius: 50%;
+            background: #fff;
+         }
+      }
+      /* 플렉스박스 */
+      .flexBox{
+         display: flex;
+         .flexItem{
+            width: 50%;
+         }
+      }
+      /* 인포아이템 */
+      .info-item{
+         display: flex;
+         padding: 2rem 1rem;
+         font-size: 1.7rem;
+         
+         img{
+            padding: 1rem;
+            width: 6.4rem;
+            height: 6.4rem;
+         }
+      }
+      /* 링크박스 */
+      .linkBox{
+         width: 100%;
+         padding-top: 2rem;
+         text-align: right;
+         .infoTitle{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 2rem;
+            padding-right: 1rem;
+            transition: .2s;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            &:hover{
+               transform: rotate(-10deg);
+            }
+         }
       }
    }
 }

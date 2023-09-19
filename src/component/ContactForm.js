@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ContactForm = () => {
+const ContactForm = ({isSectionActive}) => {
    return (
-      <form action="https://formspree.io/f/mgejznkg" method="post" className='contactForm'>
+      <form action="https://formspree.io/f/mgejznkg" method="post" className={`contactForm ${isSectionActive? 'active' : null}`}>
          <label className='formLabel' htmlFor="name">NAME</label>
          <input className='inputStyle' type="text" id='name' name='name' />
          <label className='formLabel' for="email">EMAIL</label>

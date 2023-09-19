@@ -28,7 +28,7 @@ const HorizonScrollBar = () => {
         left: '0',
         width: '100vw',
         height: '5px',
-        backgroundColor: '#333',
+        backgroundColor: '#fff',
         overflow: 'hidden',
         zIndex: '1000',
         
@@ -39,7 +39,7 @@ const HorizonScrollBar = () => {
         style={{
           width: `${scrollPercentage}%`,
           height: '5px',
-          backgroundColor: '#db321c',
+          backgroundColor: '#222',
         }}
       />
     </div>

@@ -2,6 +2,7 @@ const data = [
    {
       image:"/img/NEXTPROJECT.png",
       title: "VIVID",
+      link:'https://next-project-pi-eight.vercel.app/',
       skill: [
          "/img/skill/React-Light.svg",
          "/img/skill/NextJS-Light.svg",
@@ -16,6 +17,7 @@ const data = [
    {
       image:"/img/SOSOMIRA.png",
       title: "SOSOMIRA",
+      link:'https://sosomira.vercel.app/',
       skill: [
          "/img/skill/React-Light.svg",
          "/img/skill/NodeJS-Light.svg",
@@ -31,6 +33,7 @@ const data = [
    {
       image:"/img/PRINTBAYKERY.png",
       title: "MOVI",
+      link:'https://next-project-pi-eight.vercel.app/',
       skill: [
          "/img/skill/React-Light.svg",
          "/img/skill/Sass.svg",
@@ -44,6 +47,7 @@ const data = [
    {
       image:'/img/PRINTBAYKERY.png',
       title: "FRINT BAYKERY",
+      link:'https://sin-still.github.io/project02/',
       skill: [
          "/img/skill/HTML.svg",
          "/img/skill/Sass.svg",
@@ -58,6 +62,7 @@ const data = [
    {
       image:'/img/KOREA.png',
       title: "한국에너지기술연구원",
+      link:'https://sin-still.github.io/project01/',
       skill: [
          "/img/skill/HTML.svg",
          "/img/skill/CSS.svg",

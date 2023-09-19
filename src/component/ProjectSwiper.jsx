@@ -38,7 +38,7 @@ export default function App() {
               <div className='project-item'>
                 <div className='project-imgBox'>
                   <div className='project-img'>
-                    <img src={item.image} alt='sosomira' />
+                    <a target="_blank" rel="noopener noreferrer"href={item.link}><img src={item.image} alt='sosomira' /></a>
                   </div>
                 </div>
                   
