@@ -31,9 +31,9 @@ const data = [
    },
 
    {
-      image:"/img/PRINTBAYKERY.png",
+      image:"/img/MOVIE.png",
       title: "MOVI",
-      link:'https://next-project-pi-eight.vercel.app/',
+      link:'https://movie-project-tawny.vercel.app/',
       skill: [
          "/img/skill/React-Light.svg",
          "/img/skill/Sass.svg",
